@@ -11,6 +11,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700&display=swap" rel="stylesheet">
 
   <style>
+    @font-face {
+      font-family: "Brutalita";
+      src: url("Brutalita.woff") format("woff");
+    }
+
     body {
       background: #000;
       font-family: 'Inter', sans-serif;
@@ -26,8 +31,21 @@
     .title {
       animation-name: fadeOut;
       animation-duration: 2s;
+      animation-delay: 2s;
       animation-fill-mode: forwards;
       position: absolute;
+      font-family: 'Brutalita', monospace;
+      font-weight: 300;
+      opacity: 0;
+    }
+
+    .emoji {
+      animation-name: fadeOut;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
+      opacity: 0;
+      position: absolute;
+      font-family: 'Brutalita', monospace;
       font-weight: 300;
     }
 
@@ -35,10 +53,17 @@
       animation-name: fadeOut;
       animation-duration: 2s;
       animation-fill-mode: forwards;
-      animation-delay: 2s;
+      animation-delay: 4s;
       opacity: 0;
       position: absolute;
+      font-family: 'Brutalita', monospace;
       font-weight: 300;
+      text-align: left;
+      margin: 1em;
+    }
+
+    a {
+      color: white;
     }
 
     @keyframes fadeOut {
@@ -78,63 +103,37 @@
     main {
       text-align: left;
       line-height: 1.6;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-gap: 40px;
       margin: 40px;
     }
 
     img {
       width: 3em;
+      height: 3em;
+      margin-right: 1em;
       border-radius: 50%;
     }
 
-    article {
-      border-radius: 40px;
-      padding: 40px;
-      background: rgb(16, 16, 16);
-      box-shadow: (0 0 #0000, 0 0 #0000), 0 0 #0000, 0 0 #0000, 0 0 #0000;
-      border: 1px solid white;
+    main {
       animation-name: fadeIn;
       animation-duration: 400ms;
       animation-fill-mode: forwards;
       opacity: 0;
     }
 
-    article p {
+    main p {
       color: #a1a1a9;
     }
 
-    a {
-      border-radius: 48px;
-      padding: 12px 24px;
-      background: #0c0c0d;
+    .icons li a {
+      padding: 1rem;
+      border-radius: 16px;
       color: white;
       text-decoration: none;
+      box-shadow: inset 0 1px 0 0 rgb(255 255 255/5%);
     }
 
-    article:nth-child(1) {
-      animation-delay: 4000ms;
-    }
-
-    article:nth-child(2) {
-      animation-delay: 4100ms;
-    }
-
-    article:nth-child(3) {
-      animation-delay: 4200ms;
-    }
-
-    article:nth-child(4) {
-      animation-delay: 4300ms;
-    }
-
-    article:nth-child(5) {
-      animation-delay: 4400ms;
-    }
-
-    article:nth-child(6) {
-      animation-delay: 4500ms;
+    main {
+      animation-delay: 6000ms;
     }
 
     #texture {
@@ -144,6 +143,77 @@
       height: 100%;
       opacity: .2;
       filter: contrast(90%) brightness(90%);
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    .icons {
+      justify-content: space-between;
+    }
+
+    li a {
+      background: rgb(24, 24, 26);
+      background: linear-gradient(180deg, rgba(24, 24, 26, 1) 0%, rgba(17, 17, 17, 1) 100%);
+    }
+
+    li a svg {
+      vertical-align: middle;
+    }
+
+    .list {
+      flex-direction: column;
+      margin-top: 3em;
+      font-size: 1.2em;
+      padding: 0.5em 1em 1em 1em;
+      font-family: 'Brutalita', monospace;
+    }
+
+    .list li {
+      padding-bottom: 0.3em;
+      padding-top: 0.3em;
+      display: flex;
+      justify-content: space-between
+    }
+
+    .list li:not(:last-child) {
+      border-bottom: 0.5px solid #2a2a2a;
+    }
+
+    .icons {
+      margin-top: 3em;
+    }
+
+    p a {
+      color: white;
+      font-weight: 600;
+    }
+
+    .list {
+      background: rgb(24, 24, 26);
+      background: linear-gradient(180deg, rgba(24, 24, 26, 1) 0%, rgba(17, 17, 17, 1) 100%);
+      border-radius: 14px;
+      padding: 1rem;
+      box-shadow: inset 0 1px 0 0 rgb(255 255 255/5%);
+    }
+
+    .list a {
+      text-decoration: none;
+    }
+
+
+    main div {
+      display: flex;
+      align-items: center;
+    }
+
+    h3 {
+      font-family: 'Brutalita', monospace;
+      font-weight: 300;
     }
   </style>
 </head>
@@ -156,47 +226,88 @@
     </filter>
     <rect width="100%" height="100%" filter="url(#noise)"></rect>
   </svg>
-  <h1 class="title">Danny de Vries</h1>
-  <h2 class="subtitle">Indie maker and Lecturer Web Technology</h2>
+  <span class="emoji">👋</span>
+  <h1 class="title">Hi. I'm Danny de VriesG</h1>
+  <h2 class="subtitle">Indie maker - Tinkerer - Visual Designer - UX Designer. UI Designer. Front-end Developer.
+    Lecturer.
+    Coach. Interaction Designer. 3D Artist. Creative Developer. Generative Artist. Data Engineer.
+  </h2>
 
   <main>
-    <article>
+    <div>
       <img src="https://avatars.githubusercontent.com/u/22084444?v=4">
       <h3>Danny de Vries</h3>
-      <p>I'm a lecturer and mentor at Communication and Multimedia Design, a human-centred and context-sensitive
-        bachelor-level
-        design education in the field of interactive digital products and services.
-    </article>
-    <article>
-      <h3>Website</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, totam corrupti. Nam rem animi expedita ipsam
-        similique voluptates voluptatibus tempore quam vitae.</p>
-      <a href="#">View Profile</a>
-    </article>
-    <article>
-      <h3>GitHub</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, totam corrupti. Nam rem animi expedita ipsam
-        similique voluptates voluptatibus tempore quam vitae.</p>
-      <a href="#">View Profile</a>
-    </article>
-    <article>
-      <h3>LinkedIn</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, totam corrupti. Nam rem animi expedita ipsam
-        similique voluptates voluptatibus tempore quam vitae.</p>
-      <a href="#">Connect with me</a>
-    </article>
-    <article>
-      <h3>Twitter</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, totam corrupti. Nam rem animi expedita ipsam
-        similique voluptates voluptatibus tempore quam vitae.</p>
-      <a href="#">View Profile</a>
-    </article>
-    <article>
-      <h3>Contact</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, totam corrupti. Nam rem animi expedita ipsam
-        similique voluptates voluptatibus tempore quam vitae.</p>
-      <a href="#">View Profile</a>
-    </article>
+    </div>
+    <p>I'm a senior lecturer at <a href="https://www.cmd-amsterdam.nl/english/">CMD Amsterdam</a>, a human-centred and
+      context-sensitive
+      bachelor-level design education. I also work as a coach at <a
+        href="https://www.hackyourfuture.net">HackYouFuture</a>
+      and tinker around with technology at my
+      one man tinker business Deckard Industries.</p>
+
+
+
+    <ul class="icons">
+      <li><a href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M8 3C9.10457 3 10 3.89543 10 5V8H16C17.1046 8 18 8.89543 18 10C18 11.1046 17.1046 12 16 12H10V14C10 15.6569 11.3431 17 13 17H16C17.1046 17 18 17.8954 18 19C18 20.1046 17.1046 21 16 21H13C9.13401 21 6 17.866 6 14V5C6 3.89543 6.89543 3 8 3Z"
+              fill="currentColor" />
+          </svg></a></li>
+      <li><a href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M12 7C9.23858 7 7 9.23858 7 12C7 14.7614 9.23858 17 12 17C14.7614 17 17 14.7614 17 12C17 9.23858 14.7614 7 12 7ZM9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12Z"
+              fill="currentColor" />
+            <path
+              d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z"
+              fill="currentColor" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M5 1C2.79086 1 1 2.79086 1 5V19C1 21.2091 2.79086 23 5 23H19C21.2091 23 23 21.2091 23 19V5C23 2.79086 21.2091 1 19 1H5ZM19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3Z"
+              fill="currentColor" />
+          </svg></a></li>
+      <li><a href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M5 7H19C19.5523 7 20 7.44771 20 8V16C20 16.5523 19.5523 17 19 17H5C4.44772 17 4 16.5523 4 16V8C4 7.44772 4.44772 7 5 7ZM2 8C2 6.34315 3.34315 5 5 5H19C20.6569 5 22 6.34315 22 8V16C22 17.6569 20.6569 19 19 19H5C3.34315 19 2 17.6569 2 16V8ZM10 9L14 12L10 15V9Z"
+              fill="currentColor" />
+          </svg></a></li>
+      <li><a href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M12 7C9.23858 7 7 9.23858 7 12C7 14.7614 9.23858 17 12 17C14.7614 17 17 14.7614 17 12C17 9.23858 14.7614 7 12 7ZM9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12Z"
+              fill="currentColor" />
+            <path
+              d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z"
+              fill="currentColor" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M5 1C2.79086 1 1 2.79086 1 5V19C1 21.2091 2.79086 23 5 23H19C21.2091 23 23 21.2091 23 19V5C23 2.79086 21.2091 1 19 1H5ZM19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3Z"
+              fill="currentColor" />
+          </svg></a></li>
+    </ul>
+
+    <ul class="list">
+      <li><a href="#">About</a><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M15.0378 6.34317L13.6269 7.76069L16.8972 11.0157L3.29211 11.0293L3.29413 13.0293L16.8619 13.0157L13.6467 16.2459L15.0643 17.6568L20.7079 11.9868L15.0378 6.34317Z"
+            fill="currentColor" />
+        </svg></li>
+      <li><a href="#">Projects</a><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M15.0378 6.34317L13.6269 7.76069L16.8972 11.0157L3.29211 11.0293L3.29413 13.0293L16.8619 13.0157L13.6467 16.2459L15.0643 17.6568L20.7079 11.9868L15.0378 6.34317Z"
+            fill="currentColor" />
+        </svg></li>
+      <li><a href="#">Speaking</a><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M15.0378 6.34317L13.6269 7.76069L16.8972 11.0157L3.29211 11.0293L3.29413 13.0293L16.8619 13.0157L13.6467 16.2459L15.0643 17.6568L20.7079 11.9868L15.0378 6.34317Z"
+            fill="currentColor" />
+        </svg></li>
+      <li><a href="#">Contact</a><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M15.0378 6.34317L13.6269 7.76069L16.8972 11.0157L3.29211 11.0293L3.29413 13.0293L16.8619 13.0157L13.6467 16.2459L15.0643 17.6568L20.7079 11.9868L15.0378 6.34317Z"
+            fill="currentColor" />
+        </svg></li>
+    </ul>
   </main>
 
 
