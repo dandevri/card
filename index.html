@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Danny de Vries</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background: #000;
+      font-family: 'Inter', sans-serif;
+      color: white;
+      display: grid;
+      place-items: center;
+      height: 100vh;
+      position: relative;
+      text-align: center;
+      margin: 0;
+    }
+
+    .title {
+      animation-name: fadeOut;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
+      position: absolute;
+      font-weight: 300;
+    }
+
+    .subtitle {
+      animation-name: fadeOut;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
+      animation-delay: 2s;
+      opacity: 0;
+      position: absolute;
+      font-weight: 300;
+    }
+
+    @keyframes fadeOut {
+      0% {
+        opacity: 0;
+        transform: translateY(20px) translateZ(0px);
+      }
+
+      20% {
+        opacity: 1;
+        transform: translateY(0px) translateZ(0px);
+      }
+
+      80% {
+        opacity: 1;
+        transform: translateY(0px) translateZ(0px);
+      }
+
+      100% {
+        opacity: 0;
+        transform: translateY(20px) translateZ(0px);
+      }
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px) translateZ(0px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0px) translateZ(0px);
+      }
+    }
+
+    main {
+      text-align: left;
+      line-height: 1.6;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 40px;
+      margin: 40px;
+    }
+
+    img {
+      width: 3em;
+      border-radius: 50%;
+    }
+
+    article {
+      border-radius: 40px;
+      padding: 40px;
+      background: rgb(16, 16, 16);
+      box-shadow: (0 0 #0000, 0 0 #0000), 0 0 #0000, 0 0 #0000, 0 0 #0000;
+      border: 1px solid white;
+      animation-name: fadeIn;
+      animation-duration: 400ms;
+      animation-fill-mode: forwards;
+      opacity: 0;
+    }
+
+    article p {
+      color: #a1a1a9;
+    }
+
+    a {
+      border-radius: 48px;
+      padding: 12px 24px;
+      background: #0c0c0d;
+      color: white;
+      text-decoration: none;
+    }
+
+    article:nth-child(1) {
+      animation-delay: 4000ms;
+    }
+
+    article:nth-child(2) {
+      animation-delay: 4100ms;
+    }
+
+    article:nth-child(3) {
+      animation-delay: 4200ms;
+    }
+
+    article:nth-child(4) {
+      animation-delay: 4300ms;
+    }
+
+    article:nth-child(5) {
+      animation-delay: 4400ms;
+    }
+
+    article:nth-child(6) {
+      animation-delay: 4500ms;
+    }
+
+    #texture {
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      opacity: .2;
+      filter: contrast(90%) brightness(90%);
+    }
+  </style>
+</head>
+
+<body>
+  <svg id="texture">
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="4" stitchTiles="stitch"></feTurbulence>
+      <feColorMatrix type="saturate" values="0"></feColorMatrix>
+    </filter>
+    <rect width="100%" height="100%" filter="url(#noise)"></rect>
+  </svg>
+  <h1 class="title">Danny de Vries</h1>
+  <h2 class="subtitle">Indie maker and Lecturer Web Technology</h2>
+
+  <main>
+    <article>
+      <img src="https://avatars.githubusercontent.com/u/22084444?v=4">
+      <h3>Danny de Vries</h3>
+      <p>I'm a lecturer and mentor at Communication and Multimedia Design, a human-centred and context-sensitive
+        bachelor-level
+        design education in the field of interactive digital products and services.
+    </article>
+    <article>
+      <h3>Website</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, totam corrupti. Nam rem animi expedita ipsam
+        similique voluptates voluptatibus tempore quam vitae.</p>
+      <a href="#">View Profile</a>
+    </article>
+    <article>
+      <h3>GitHub</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, totam corrupti. Nam rem animi expedita ipsam
+        similique voluptates voluptatibus tempore quam vitae.</p>
+      <a href="#">View Profile</a>
+    </article>
+    <article>
+      <h3>LinkedIn</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, totam corrupti. Nam rem animi expedita ipsam
+        similique voluptates voluptatibus tempore quam vitae.</p>
+      <a href="#">Connect with me</a>
+    </article>
+    <article>
+      <h3>Twitter</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, totam corrupti. Nam rem animi expedita ipsam
+        similique voluptates voluptatibus tempore quam vitae.</p>
+      <a href="#">View Profile</a>
+    </article>
+    <article>
+      <h3>Contact</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, totam corrupti. Nam rem animi expedita ipsam
+        similique voluptates voluptatibus tempore quam vitae.</p>
+      <a href="#">View Profile</a>
+    </article>
+  </main>
+
+
+</body>
+
+</html>
