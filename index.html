@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Danny de Vries</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700&display=swap" rel="stylesheet">
@@ -31,35 +32,12 @@
     .title {
       animation-name: fadeOut;
       animation-duration: 2s;
-      animation-delay: 2s;
       animation-fill-mode: forwards;
+      animation-delay: 500ms;
       position: absolute;
       font-family: 'Brutalita', monospace;
       font-weight: 300;
       opacity: 0;
-    }
-
-    .emoji {
-      animation-name: fadeOut;
-      animation-duration: 2s;
-      animation-fill-mode: forwards;
-      opacity: 0;
-      position: absolute;
-      font-family: 'Brutalita', monospace;
-      font-weight: 300;
-    }
-
-    .subtitle {
-      animation-name: fadeOut;
-      animation-duration: 2s;
-      animation-fill-mode: forwards;
-      animation-delay: 4s;
-      opacity: 0;
-      position: absolute;
-      font-family: 'Brutalita', monospace;
-      font-weight: 300;
-      text-align: left;
-      margin: 1em;
     }
 
     a {
@@ -104,6 +82,11 @@
       text-align: left;
       line-height: 1.6;
       margin: 40px;
+      animation-name: fadeIn;
+      animation-duration: 400ms;
+      animation-fill-mode: forwards;
+      opacity: 0;
+      animation-delay: 2500ms;
     }
 
     img {
@@ -113,12 +96,6 @@
       border-radius: 50%;
     }
 
-    main {
-      animation-name: fadeIn;
-      animation-duration: 400ms;
-      animation-fill-mode: forwards;
-      opacity: 0;
-    }
 
     main p {
       color: #a1a1a9;
@@ -130,10 +107,11 @@
       color: white;
       text-decoration: none;
       box-shadow: inset 0 1px 0 0 rgb(255 255 255/5%);
-    }
-
-    main {
-      animation-delay: 6000ms;
+      width: 22px;
+      display: flex;
+      justify-content: center;
+      height: 22px;
+      align-items: center;
     }
 
     #texture {
@@ -167,7 +145,7 @@
 
     .list {
       flex-direction: column;
-      margin-top: 3em;
+      margin-top: 2em;
       font-size: 1.2em;
       padding: 0.5em 1em 1em 1em;
       font-family: 'Brutalita', monospace;
@@ -185,7 +163,7 @@
     }
 
     .icons {
-      margin-top: 3em;
+      margin-top: 2em;
     }
 
     p a {
@@ -226,13 +204,13 @@
     </filter>
     <rect width="100%" height="100%" filter="url(#noise)"></rect>
   </svg>
-  <span class="emoji">👋</span>
-  <h1 class="title">Hi. I'm Danny de VriesG</h1>
-  <h2 class="subtitle">Indie maker - Tinkerer - Visual Designer - UX Designer. UI Designer. Front-end Developer.
-    Lecturer.
-    Coach. Interaction Designer. 3D Artist. Creative Developer. Generative Artist. Data Engineer.
-  </h2>
-
+  <h1 class="title">
+    <svg width="109" height="109" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M36.885 18.712v18.173H.539v71.654h46.604c50.71 0 50.967-.027 56.267-5.886 5.051-5.584 5.129-6.318 5.129-48.114s-.078-42.53-5.129-48.114C98.378.862 96.286.539 65.316.539H36.885v18.173Zm35.307 35.827v17.653H36.885V36.885h35.307v17.654Z"
+        fill="#fff" />
+    </svg>
+  </h1>
   <main>
     <div>
       <img src="https://avatars.githubusercontent.com/u/22084444?v=4">
@@ -248,38 +226,44 @@
 
 
     <ul class="icons">
-      <li><a href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd"
-              d="M8 3C9.10457 3 10 3.89543 10 5V8H16C17.1046 8 18 8.89543 18 10C18 11.1046 17.1046 12 16 12H10V14C10 15.6569 11.3431 17 13 17H16C17.1046 17 18 17.8954 18 19C18 20.1046 17.1046 21 16 21H13C9.13401 21 6 17.866 6 14V5C6 3.89543 6.89543 3 8 3Z"
-              fill="currentColor" />
-          </svg></a></li>
-      <li><a href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd"
-              d="M12 7C9.23858 7 7 9.23858 7 12C7 14.7614 9.23858 17 12 17C14.7614 17 17 14.7614 17 12C17 9.23858 14.7614 7 12 7ZM9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12Z"
-              fill="currentColor" />
+      <li><a href="#">
+          <svg width="17" height="14" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
-              d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z"
-              fill="currentColor" />
-            <path fill-rule="evenodd" clip-rule="evenodd"
-              d="M5 1C2.79086 1 1 2.79086 1 5V19C1 21.2091 2.79086 23 5 23H19C21.2091 23 23 21.2091 23 19V5C23 2.79086 21.2091 1 19 1H5ZM19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3Z"
-              fill="currentColor" />
-          </svg></a></li>
-      <li><a href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd"
-              d="M5 7H19C19.5523 7 20 7.44771 20 8V16C20 16.5523 19.5523 17 19 17H5C4.44772 17 4 16.5523 4 16V8C4 7.44772 4.44772 7 5 7ZM2 8C2 6.34315 3.34315 5 5 5H19C20.6569 5 22 6.34315 22 8V16C22 17.6569 20.6569 19 19 19H5C3.34315 19 2 17.6569 2 16V8ZM10 9L14 12L10 15V9Z"
-              fill="currentColor" />
-          </svg></a></li>
-      <li><a href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd"
-              d="M12 7C9.23858 7 7 9.23858 7 12C7 14.7614 9.23858 17 12 17C14.7614 17 17 14.7614 17 12C17 9.23858 14.7614 7 12 7ZM9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12Z"
-              fill="currentColor" />
+              d="M16.484 2.125a3.375 3.375 0 0 1-1.875.563 3.375 3.375 0 0 0 1.5-1.875c-.59.5-1.335.78-2.109.797a3.375 3.375 0 0 0-5.719 3.046 9.375 9.375 0 0 1-6.797-3.468 3.375 3.375 0 0 0 1.032 4.406 3.375 3.375 0 0 1-1.5-.328A3.375 3.375 0 0 0 3.64 8.5a3.375 3.375 0 0 1-1.5.047 3.375 3.375 0 0 0 3.14 2.344A9.376 9.376 0 0 1 .36 12.25 9.374 9.374 0 0 0 14.844 3.86a9.38 9.38 0 0 0 1.64-1.735Z"
+              fill="#fff" />
+          </svg>
+        </a></li>
+      <li><a href="#">
+
+          <svg width="16" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
-              d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z"
-              fill="currentColor" />
-            <path fill-rule="evenodd" clip-rule="evenodd"
-              d="M5 1C2.79086 1 1 2.79086 1 5V19C1 21.2091 2.79086 23 5 23H19C21.2091 23 23 21.2091 23 19V5C23 2.79086 21.2091 1 19 1H5ZM19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3Z"
-              fill="currentColor" />
-          </svg></a></li>
+              d="M2.656 4.203a1.734 1.734 0 1 0 0-3.469 1.734 1.734 0 0 0 0 3.47ZM7.438 5.094v9.281-9.281Zm-4.782 0v9.281Z"
+              fill="#fff" />
+            <path d="M2.656 5.094v9.281m4.781-9.281v9.281-9.281Z" stroke="#fff" stroke-width="3.094" />
+            <path
+              d="M8.938 9.219c0-.938.609-1.875 1.687-1.875 1.125 0 1.547.843 1.547 2.11v4.921h3.094V9.078c0-2.86-1.5-4.172-3.563-4.172-1.594 0-2.39.89-2.765 1.5"
+              fill="#fff" />
+          </svg>
+        </a></li>
+      <li><a href="#">
+          <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M11.422.781H4.578A3.797 3.797 0 0 0 .781 4.578v6.844c0 2.097 1.7 3.797 3.797 3.797h6.844c2.097 0 3.797-1.7 3.797-3.797V4.578c0-2.097-1.7-3.797-3.797-3.797Z"
+              stroke="#fff" stroke-width="1.406" />
+            <path
+              d="M8 11.375a3.375 3.375 0 1 0 0-6.75 3.375 3.375 0 0 0 0 6.75ZM12.266 4.016a.281.281 0 1 0 0-.563.281.281 0 0 0 0 .563Z"
+              stroke="#fff" stroke-width="1.406" />
+          </svg>
+        </a></li>
+      <li><a href="#">
+          <svg width="17" height="21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M12.703 19.39c.656 0 .563.797.563.797H4.733s-.094-.797.563-.797c.61 0 .75-.28.75-.562L6 16.765c-3.328.75-4.031-1.593-4.031-1.593-.563-1.407-1.313-1.735-1.313-1.735-1.125-.75.047-.75.047-.75 1.219.094 1.875 1.22 1.875 1.22 1.031 1.827 2.766 1.312 3.469 1.03.093-.797.422-1.312.75-1.64-2.672-.282-5.438-1.313-5.438-5.907 0-1.312.469-2.39 1.219-3.234-.14-.281-.516-1.5.14-3.14 0 0 .985-.329 3.282 1.218a10.877 10.877 0 0 1 6 0C14.297.687 15.28 1.015 15.28 1.015c.656 1.641.281 2.86.14 3.141a4.749 4.749 0 0 1 1.22 3.234c0 4.594-2.813 5.625-5.485 5.907.469.375.844 1.125.844 2.25l-.047 3.28c0 .282.14.563.75.563Z"
+              fill="#fff" />
+          </svg>
+
+
+        </a></li>
     </ul>
 
     <ul class="list">
