@@ -4,7 +4,7 @@
 ![banner](https://user-images.githubusercontent.com/22084444/155322278-0188e099-dfb2-40e3-946a-84e435e69054.png)
 
 
-Go to https://card.dandevri.es/qr on your smartphone. You'll get a page with a _QR Code_. Let somebody else scan that QR code with their smartphone, the default camera app will scan QR codes just fine. That QR Code links to https://card.dandevri.es which lists my social media and some basic links to my personal website.
+Go to https://card.dandevri.es/qr on your smartphone. You'll get a page with a _QR Code_. Let somebody else scan that QR code with their smartphone, the default camera app will scan QR codes just fine. That QR Code links to https://card.dandevri.es which lists my social media and some basic links to my personal website. Custom QR Code was created with [QRCode Monkey](https://www.qrcode-monkey.com).
 
 ## Install
 
